@@ -1,0 +1,4 @@
+model=$1
+
+./mcf -p 8 -b 8 --premirror=file:///mnt/mirrorswp/webos-wearable/master/downloads ${model}
+

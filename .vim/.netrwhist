@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/jungim.heo/ace/src/swe'
+let g:netrw_dirhist_2='/home/jungim.heo/lap/.repo/projects'
+let g:netrw_dirhist_3='/home/jungim.heo/model/g2/android/vendor/lge/external/chromium_lge/src'
+let g:netrw_dirhist_4='/home/jungim.heo/model/g2/android/vendor/lge/external/chromium_lge/src/chrome'

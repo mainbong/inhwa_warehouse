@@ -1,0 +1,2 @@
+#!/bin/bash
+repo init -u ssh://inhwa.ma@mod.lge.com:29411/J1_CLUSTER/manifest

@@ -1,0 +1,1 @@
+kvm -m 512 -redir :8090::80 -redir :8022::22 ~/workspace/ubuntu_core/ubuntu-15.04-snappy-amd64-generic.img

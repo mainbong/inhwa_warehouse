@@ -1,0 +1,2 @@
+#!/bin/bash
+git clone ssh://gpro.lgsvl.com/webos-wearable/build-webos-wearable
