@@ -110,6 +110,9 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
+" disable entering replace mode by Insert key
+imap <Insert> <Nop>
+inoremap <S-Insert> <Insert>
 
 " }}}
 
