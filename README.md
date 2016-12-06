@@ -61,7 +61,7 @@ Now You can see 4 files added to analysis.<br/>
 **.prjdirs** to record your workdirs. <br/>
 
 ### Step 3. Short Cuts
-#### File Open ( CtrlP plugin )
+#### File Open
 * Press 'Ctrl' + 'p'.<br/>
     If you haven't made 'cscope.files', It would gather all of files of here and subdirs. It may takes long time if there is many files.
     * Typing file name, and press 'Enter' then the file would be opened.
@@ -103,3 +103,5 @@ Now You can see 4 files added to analysis.<br/>
         show : Show connections               (Usage: show)
         Press ENTER or type command to continue
         ~~~
+#### Auto Complete
+* Press 'TAB' on the word that you want to complete in 'INSERT' mode.
