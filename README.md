@@ -21,6 +21,8 @@ $ mv * ~/
 # let's source bashrc to use files of 'bin' directly.
 $ cd ~/
 $ source .bashrc
+# unzip .vim.tar.gz to .vim
+$ tar xvfz .vim.tar.gz
 ~~~
 And You have to install vim's bundle at first time.
 ~~~
