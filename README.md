@@ -143,4 +143,37 @@ To indent a block of code, go to one of the braces and use command<br/>
 These are the simplest, yet powerful commands to indent multiple lines.<br/>
 
 #### Basic short cuts
-[Vim Commands Cheet sheet](https://www.fprintf.net/vimCheatSheet.html)
+[Vim Commands Cheet sheet](https://www.fprintf.net/vimCheatSheet.html)<br/>
+* How to Exit
+    * **:q[uit]** : Quit Vim. This fails when changes have been made.
+    * **:q[uit]!** : Quit without writing.
+    * **:wq** : Write the current file and exit.
+    * **:wq!** : Write the current file and exit always.
+    * **:qa** : Exit all panes.
+* Editing a File
+    * **:e[dit] {file}** : Edit {file}.
+* Inserting Text
+    * **i** : Insert text before the cursor [count] times.
+* Deleting Text
+    * **dd** : Delete [count] lines
+    * **{Visual}x or {Visual}d** : Delete the highlighted text
+* Substituting
+    * **:[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]** : For each line in [range] replace a match of {pattern} with {string}.
+* Copying and Moving Text
+    * **["x]yy** : Yank [count] lines [into register x]
+    * **{Visual}["x]y** : Yank the highlighted text [into register x]
+    * **["x]p** : Put the text [from register x] after the cursor [count] times.
+    * **["x]P** : Put the text [from register x] before the cursor [count] times.
+* Undo/Redo
+    * **u** : Undo [count] changes.
+    * **CTRL-R** : Redo [count] changes which were undone.
+* Moving Around
+    * **w** : [count] words forward
+    * **b** : [count] words backward
+* Marks
+    * **m{a-zA-Z}** : Set mark {a-zA-Z} at cursor position (does not move the cursor, this is not a motion command).
+    * **'{a-z}** : To the first non-blank character on the line with mark {a-z} (linewise).
+* Searching
+    * **/{pattern}[/]** : Search forward for the [count]'th occurrence of {pattern}
+    * **n** : Repeat the latest "/" or "?" [count] times.
+    * **N** : Repeat the latest "/" or "?" [count] times in opposite direction.
