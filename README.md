@@ -113,6 +113,13 @@ Press ENTER or type command to continue
 #### Outline ( TagBar )
 * Pree **'F9'**
 
+#### Git ( Fugitive )
+[Fugitive.vim](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
+The result of git blame shows visually.
+~~~
+:Gblame
+~~~
+
 #### Indentation
 The master of all commands is
 ~~~
