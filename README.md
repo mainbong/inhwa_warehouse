@@ -111,10 +111,10 @@ Press ENTER or type command to continue
 * Press **'Ctrl' + 'd'** on the function that you want to add comments.
 
 #### Outline ( TagBar )
-* Pree **'F9'**
+* Press **'F9'**
 
 #### Git ( Fugitive )
-[Fugitive.vim](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
+[Fugitive.vim Guide](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)<br/>
 The result of git blame shows visually.
 ~~~
 :Gblame
