@@ -184,3 +184,9 @@ These are the simplest, yet powerful commands to indent multiple lines.<br/>
     * **/{pattern}[/]** : Search forward for the [count]'th occurrence of {pattern}
     * **n** : Repeat the latest "/" or "?" [count] times.
     * **N** : Repeat the latest "/" or "?" [count] times in opposite direction.
+* Divide Screen
+    * **'Ctrl' + 'w'** : Ready to input a Screen commands. Let's call it **{Screen}**.
+    * **{Screen} + 'n'** : Divide screen horizontally
+    * **{Screen} + 'v'** : Divide screen vertically
+    * **{Screen} + UP/DOWN/RIGHT/LEFT** : Move screen
+    * **{Screen} + '='** : Resize all screens to be same size.
