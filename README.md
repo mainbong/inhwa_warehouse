@@ -60,8 +60,8 @@ Now You can see 4 files added to analysis.<br/>
 **tags** for ctags. <br/>
 **.prjdirs** to record your workdirs. <br/>
 
-### Step 3. Short Cuts
-#### File Open
+## Remember Short Cuts
+#### File Open ( CtrlP )
 * Press 'Ctrl' + 'p'.<br/>
     If you haven't made 'cscope.files', It would gather all of files of here and subdirs. It may takes long time if there is many files.
     * Typing file name, and press 'Enter' then the file would be opened.
@@ -70,38 +70,77 @@ Now You can see 4 files added to analysis.<br/>
     * Press 'Ctrl' + 'r' then **Search algorithm** would be changed from 'Fuzzy' search algorithm to 'Regex' search algorithm. or vice verse.
     * Press 'Ctrl' + 'f' then **List** would be changed from 'File list' to 'Opened file list' to 'MRU file list'.
 
-#### Auto Complete ( NeoCompleteCache )
-* Press 'TAB' on the word that you want to complete in 'INSERT' mode.
-
-
 #### File Explorer ( NERD Tree )
-* Press 'Ctrl' + 'n'.<br/>
-    * To refresh it, Press 'Shift' + 'r'.
+* Press **'Ctrl' + 'n'**.<br/>
+    * To refresh it, Press **'Shift' + 'r'**.
 
 #### Ctags
-* Press 'Ctrl' + ']' on a symbol/function that you want to find the tag.<br/>
+* Press **'Ctrl' + ']'** on a symbol/function that you want to find the tag.<br/>
 
 #### Cscope
-* Press 'Ctrl' + '\' + 'cscope command'
-    * You can see cscope-find commands<br/>
-        ~~~
-        :cs help
-        cscope commands:
-        add  : Add a new database             (Usage: add file|dir [pre-path] [flags])
-        find : Query for a pattern            (Usage: find c|d|e|f|g|i|s|t name)
-               c: Find functions calling this function
-               d: Find functions called by this function
-               e: Find this egrep pattern
-               f: Find this file
-               g: Find this definition
-               i: Find files #including this file
-               s: Find this C symbol
-               t: Find this text string
-        help : Show this message              (Usage: help)
-        kill : Kill a connection              (Usage: kill #)
-        reset: Reinit all connections         (Usage: reset)
-        show : Show connections               (Usage: show)
-        Press ENTER or type command to continue
-        ~~~
-#### Auto Complete
-* Press 'TAB' on the word that you want to complete in 'INSERT' mode.
+* Press **'Ctrl' + '\'** + 'cscope-find command'
+    * You can see cscope commands<br/>
+~~~
+:cs help
+cscope commands:
+add  : Add a new database             (Usage: add file|dir [pre-path] [flags])
+find : Query for a pattern            (Usage: find c|d|e|f|g|i|s|t name)
+       c: Find functions calling this function
+       d: Find functions called by this function
+       e: Find this egrep pattern
+       f: Find this file
+       g: Find this definition
+       i: Find files #including this file
+       s: Find this C symbol
+       t: Find this text string
+help : Show this message              (Usage: help)
+kill : Kill a connection              (Usage: kill #)
+reset: Reinit all connections         (Usage: reset)
+show : Show connections               (Usage: show)
+Press ENTER or type command to continue
+~~~
+
+* For example, If you want to find a definition for word. Press **'Ctrl' + '\' + 'g'**
+* Go next : **']' + 'q'**
+* Go prev : **'[' + 'q'**
+  
+#### Auto Complete ( NeoCompleteCache )
+* Press **'TAB'** on the word that you want to complete in 'INSERT' mode.
+
+#### Doxygen comment ( DoxygenToolkit )
+* Press **'Ctrl' + 'd'** on the function that you want to add comments.
+
+#### Outline ( TagBar )
+* Pree **'F9'**
+
+#### Indentation
+The master of all commands is
+~~~
+gg=G
+~~~
+This indents the entire file!<br/>
+And below are some of the simple and elegant commands used to indent lines quickly in Vim or gVim.<br/>
+To indent the current line<br/>
+~~~
+==
+~~~
+To indent the all the lines below the current line<br/>
+~~~
+=G
+~~~
+To indent n lines below the current line<br/>
+~~~
+n==
+~~~
+For example, to indent 4 lines below the current line<br/>
+~~~
+4==
+~~~
+To indent a block of code, go to one of the braces and use command<br/>
+~~~
+=%
+~~~
+These are the simplest, yet powerful commands to indent multiple lines.<br/>
+
+#### Basic short cuts
+[Vim Commands Cheet sheet](https://www.fprintf.net/vimCheatSheet.html)
