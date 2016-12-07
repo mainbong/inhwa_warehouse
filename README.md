@@ -194,3 +194,6 @@ These are the simplest, yet powerful commands to indent multiple lines.<br/>
     * **{Screen} + 'v'** : Divide screen vertically
     * **{Screen} + UP/DOWN/RIGHT/LEFT** : Move screen
     * **{Screen} + '='** : Resize all screens to be same size.
+* Explorer Opened files
+    * **'Ctrl' + 'o'** : Go Prev opened file. 'o' means Go Out.
+    * **'Ctrl' + 'i'** : Go Next opened file. 'i' means Go In.
