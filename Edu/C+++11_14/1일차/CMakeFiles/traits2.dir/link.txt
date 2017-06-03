@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/traits2.dir/8_traits2.cpp.o  -o traits2 -rdynamic 

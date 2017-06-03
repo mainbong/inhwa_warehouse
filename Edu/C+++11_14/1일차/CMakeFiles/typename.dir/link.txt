@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/typename.dir/5_typename.cpp.o  -o typename -rdynamic 

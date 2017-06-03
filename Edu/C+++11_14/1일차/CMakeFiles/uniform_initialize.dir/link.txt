@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/uniform_initialize.dir/3_uniform_initialize.cpp.o  -o uniform_initialize -rdynamic 

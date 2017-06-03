@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/smart_ptr.dir/15_스마트포인터.o  -o smart_ptr -rdynamic 

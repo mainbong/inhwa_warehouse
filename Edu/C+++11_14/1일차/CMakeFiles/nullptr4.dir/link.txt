@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/nullptr4.dir/2_nullptr4.cpp.o  -o nullptr4 -rdynamic 

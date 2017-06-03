@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/variadic_template4.dir/11_가변인자템플릿4.cpp.o  -o variadic_template4 -rdynamic 

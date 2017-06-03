@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/tuple6.dir/12_tuple6.cpp.o  -o tuple6 -rdynamic 

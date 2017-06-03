@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/tuple4.dir/12_tuple4.cpp.o  -o tuple4 -rdynamic 

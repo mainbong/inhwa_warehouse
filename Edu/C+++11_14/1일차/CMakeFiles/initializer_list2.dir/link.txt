@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/initializer_list2.dir/4_initializer_list2.cpp.o  -o initializer_list2 -rdynamic 

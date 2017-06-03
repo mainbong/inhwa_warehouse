@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/tuple2.dir/12_tuple2.cpp.o  -o tuple2 -rdynamic 

@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG  -m64 CMakeFiles/begin_end.dir/10_begin_end.cpp.o  -o begin_end -rdynamic 
