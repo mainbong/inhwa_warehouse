@@ -20,6 +20,12 @@ set hidden
 if &term == "xterm"
     set t_Co=256
 endif
+set cursorline
+set cursorcolumn
+"if version >= 703
+if exists('+colorcolumn')
+	set colorcolumn=80
+endif
 
 " To install vundle
 " git clone https://github.com/gmarik/vundle.git  ~/.vim/bundle/vundle
@@ -61,8 +67,9 @@ Bundle 'DoxygenToolkit.vim'
 "Bundle 'Shougo/unite.vim'
 "Bundle 'Shougo/neomru.vim'
 "Bundle 'bling/vim-airline'
-
-
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+Bundle 'tpope/vim-fugitive'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 "Bundle 'git://localhost/wvim.git'
@@ -114,7 +121,61 @@ imap <C-v> <ESC>"+pa
 imap <Insert> <Nop>
 inoremap <S-Insert> <Insert>
 
+" Open new buffer
+nmap <leader><Tab> :enew<CR>
+
+" Move Next buffer
+nmap <Tab> :bnext<CR>
+nmap <S-Tab> :bprevious<CR>
+
+nmap <leader>q :bdelete<CR>
+
+nmap <leader>bl :ls<CR>
+
 " }}}
+
+
+" airline configuration {{{
+let g:airline_theme='minimalist'
+set guifont=Dejavu\ Sans\ Mono\ for\ Powerline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.maxlinenr = '㏑'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+
+""  }}}
 
 " mouse configuration {{{
 set mouse=a
