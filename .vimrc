@@ -69,6 +69,7 @@ Bundle 'DoxygenToolkit.vim'
 "Bundle 'bling/vim-airline'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
+Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tpope/vim-fugitive'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
@@ -341,3 +342,24 @@ let g:ctrlp_cache_dir = "~/.cache/ctrlp_$STY.$WINDOW"
 endif
 " }}}
 " vim:ft=vim:fdm=marker:ff=unix:nowrap:tabstop=4:shiftwidth=4:softtabstop=4:smarttab:shiftround:expandtab
+"
+" multi cursor use {{{
+let g:multi_cursor_use_default_mapping=0
+
+" Default mapping
+" let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_start_word_key      = '<C-m>'
+" let g:multi_cursor_select_all_word_key = '<A-n>'
+" let g:multi_cursor_start_key           = 'g<C-n>'
+" let g:multi_cursor_select_all_key      = 'g<A-n>'
+
+" let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_next_key            = '<C-m>'
+
+" let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_prev_key            = '<C-,>'
+
+" let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+" }}}
+
