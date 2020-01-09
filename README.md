@@ -197,3 +197,8 @@ These are the simplest, yet powerful commands to indent multiple lines.<br/>
 * Explorer Opened files
     * **'Ctrl' + 'o'** : Go Prev opened file. 'o' means Go Out.
     * **'Ctrl' + 'i'** : Go Next opened file. 'i' means Go In.
+
+* YCM python definition shortcut
+    * **'\' + 'g'** : Go Definition or Declration for python.
+* YCM install Guide
+    * https://github.com/ycm-core/YouCompleteMe#mac-os-x-super-quick-installation

@@ -71,6 +71,15 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tpope/vim-fugitive'
+
+"For Python
+Bundle 'vim-scripts/indentpython.vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'nvie/vim-flake8'
+Bundle 'vim-syntastic/syntastic'
+
+let python_highlight_all=1
+syntax on
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 "Bundle 'git://localhost/wvim.git'
@@ -363,3 +372,6 @@ let g:multi_cursor_prev_key            = '<C-,>'
 let g:multi_cursor_quit_key            = '<Esc>'
 " }}}
 
+" YCM Go to definition
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
