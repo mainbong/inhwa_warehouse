@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kakao/.oh-my-zsh"
+export ZSH="/Users/sher.lock/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -109,7 +109,7 @@ prompt_context() {
 export alias ctags="`brew --prefix`/bin/ctags"
 
 export GRADLE_HOME='/usr/local/opt/gradle/libexec'
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.11)
 export PATH=${PATH}:${HOME}/bin:${GRADLE_HOME}/bin
 export PATH=${PATH}:/Applications/MySQLWorkbench.app/Contents/MacOS
 
@@ -164,30 +164,55 @@ export OCI_LIB_DIR=/opt/oracle/instantclient
 export OCI_INC_DIR=/opt/oracle/instantclient/sdk/include
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/kakao/.sdkman"
-[[ -s "/Users/kakao/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/kakao/.sdkman/bin/sdkman-init.sh"
-export JAVA_HOME=`/usr/libexec/java_home -v1.8`
-export PATH="$JAVA_HOME/bin:$PATH"
+export SDKMAN_DIR="/Users/sher.lock/.sdkman"
+[[ -s "/Users/sher.lock/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sher.lock/.sdkman/bin/sdkman-init.sh"
+export JAVA_HOME=`/usr/libexec/java_home -v1.11`
+export MAVEN_HOME="/Users/sher.lock/bin/apache-maven-3.6.3"
+
+export PATH="$MAVEN_HOME/bin:$JAVA_HOME/bin:$PATH"
+
 #source ~/.savanna-hadoop-env
 #source ~/.doopey-env
 
 # Android Development
-export PATH="/Users/kakao/Library/Android/sdk/platform-tools:$PATH"
+export PATH="/Users/sher.lock/Library/Android/sdk/platform-tools:$PATH"
 
-export ANDROID_HOME="/Users/kakao/Library/Android/sdk"
+export ANDROID_HOME="/Users/sher.lock/Library/Android/sdk"
+
+# Kafka
+export KAFKA_HOME="/Users/sher.lock/bin/kafka_2.13-2.8.0"
+export PATH="$KAFKA_HOME/bin:$PATH"
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/kakao/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/sher.lock/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/kakao/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/kakao/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/sher.lock/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/sher.lock/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/kakao/anaconda3/bin:$PATH"
+        export PATH="/Users/sher.lock/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
+# <<< conda initialize <<
 
+alias python=python3
+
+alias k="kubectl"
+alias d="dkosctl"
+alias kc="kubectx"
+alias kw="watch -n 1 kubectl get pods -o wide --all-namespaces"
+alias kpw="watch -n 1 kubectl get pods -o wide"
+alias kpwa="watch -n 1 kubectl get pods -o wide -n scdf-apps"
+alias kd="kubectl describe pod"
+alias kp="kubectl port-forward"
+alias kdel="k delete --force --grace-period=0"
+alias ks="kubectl get svc --all-namespaces"
+alias kclean="kubectl get pod --field-selector=status.phase==Succeeded | awk '{print $1}' | xargs kubectl --namespace=scdf-apps delete pod -o name"
+alias kns="kubens scdf"
+alias knsa="kubens scdf-apps"
+alias krd="k rollout restart deploy "
+alias knmd="kubens mongodb"
