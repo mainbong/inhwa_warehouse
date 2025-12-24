@@ -45,9 +45,12 @@ inhwa_warehouse/
 │   └── lua/
 │       ├── config/   # 옵션, 키매핑
 │       └── plugins/  # 플러그인 설정
+├── tmux/              # tmux 설정 (최신)
+│   ├── README.md     # 상세 가이드 & 플러그인 설명 ⭐
+│   └── .tmux.conf    # tmux 3.4+ 최적화
 ├── .vimrc           # 레거시 Vim 설정
 ├── .zshrc           # Zsh 설정
-├── .tmux.conf       # tmux 설정
+├── .tmux.conf       # tmux 설정 (루트용)
 └── bin/             # 유틸리티 스크립트
 ```
 
@@ -91,14 +94,49 @@ inhwa_warehouse/
 
 ## 📚 추가 설정
 
+### tmux 설정 (최신 - 권장)
+
+```bash
+# 1. tmux 설치
+brew install tmux  # macOS
+# 또는
+sudo apt install tmux  # Ubuntu
+
+# 2. 설정 복사
+cp tmux/.tmux.conf ~/
+
+# 3. TPM 설치
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# 4. tmux 실행 후 플러그인 설치
+tmux
+# tmux 안에서: Ctrl+a 그리고 Shift+i
+```
+
+**📖 상세 가이드:** [tmux/README.md](./tmux/README.md)
+
+**주요 기능:**
+- ✅ 세션 자동 저장/복원 (재부팅해도 유지)
+- ✅ 시스템 클립보드 통합
+- ✅ 파일/URL 빠른 검색 및 열기
+- ✅ Tokyo Night 테마
+- ✅ Vim 스타일 네비게이션
+- ✅ 9개 강력한 플러그인
+
+**빠른 참조:**
+| 기능 | 단축키 |
+|------|--------|
+| 세션 저장 | `Ctrl+a Ctrl+s` |
+| 세션 복원 | `Ctrl+a Ctrl+r` |
+| 수평 분할 | `Ctrl+a \|` |
+| 수직 분할 | `Ctrl+a -` |
+| 패널 이동 | `Ctrl+a h/j/k/l` |
+| 파일 검색 | `Ctrl+a Ctrl+f` |
+| URL 검색 | `Ctrl+a Ctrl+u` |
+
 ### Zsh 설정
 ```bash
 cp .zshrc ~/
-```
-
-### tmux 설정
-```bash
-cp .tmux.conf ~/
 ```
 
 ## 🔄 레거시 Vim 설정 (비권장)
