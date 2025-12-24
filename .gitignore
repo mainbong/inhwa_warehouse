@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Vim
+.vim/bundle/
+.vim/.netrwhist
+*.swp
+*.swo
+*~
+
+# Neovim - don't commit plugins
+nvim/lazy-lock.json
+
+# Screen/tmux session files
+.viminfo_*
+.cache/
