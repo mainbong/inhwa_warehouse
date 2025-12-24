@@ -229,6 +229,88 @@ else
           })
         end
 
+        -- Go (gopls)
+        if vim.fn.executable('gopls') == 1 then
+          lspconfig.gopls.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+            settings = {
+              gopls = {
+                analyses = {
+                  unusedparams = true,
+                },
+                staticcheck = true,
+              }
+            }
+          })
+        end
+
+        -- Rust (rust-analyzer)
+        if vim.fn.executable('rust-analyzer') == 1 then
+          lspconfig.rust_analyzer.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+          })
+        end
+
+        -- JSON
+        if vim.fn.executable('vscode-json-language-server') == 1 then
+          lspconfig.jsonls.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+          })
+        end
+
+        -- TypeScript/JavaScript
+        if vim.fn.executable('typescript-language-server') == 1 then
+          lspconfig.tsserver.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+          })
+        end
+
+        -- YAML (with Kubernetes schema support)
+        if vim.fn.executable('yaml-language-server') == 1 then
+          lspconfig.yamlls.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+            settings = {
+              yaml = {
+                schemas = {
+                  kubernetes = "/*.yaml",
+                  ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
+                  ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+                  ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
+                  ["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
+                  ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
+                  ["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+                  ["https://json.schemastore.org/dependabot-v2"] = ".github/dependabot.{yml,yaml}",
+                  ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "*docker-compose*.{yml,yaml}",
+                },
+                format = { enable = true },
+                validate = true,
+                completion = true,
+              }
+            }
+          })
+        end
+
+        -- CMake
+        if vim.fn.executable('cmake-language-server') == 1 then
+          lspconfig.cmake.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+          })
+        end
+
+        -- Docker
+        if vim.fn.executable('docker-langserver') == 1 then
+          lspconfig.dockerls.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+          })
+        end
+
         -- Show message when using native LSP
         vim.notify("Using Neovim native LSP (Node.js not available)", vim.log.levels.INFO)
       end,
