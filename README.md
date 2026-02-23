@@ -135,9 +135,59 @@ tmux
 | URL 검색 | `Ctrl+a Ctrl+u` |
 
 ### Zsh 설정
+
+#### 1. oh-my-zsh 설치 (미설치 시)
+
+oh-my-zsh가 없으면 먼저 설치해야 합니다.
+
+```bash
+# zsh 설치 (없는 경우)
+brew install zsh          # macOS
+# 또는
+sudo apt install zsh      # Ubuntu/Debian
+
+# oh-my-zsh 설치
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+#### 2. agnoster 테마용 Powerline 폰트 설치
+
+이 설정은 `agnoster` 테마를 사용합니다. 폰트가 없으면 프롬프트가 깨져 보입니다.
+
+```bash
+# macOS - Homebrew로 설치
+brew install font-meslo-lg-nerd-font
+# 터미널 앱(iTerm2, Terminal.app 등)에서 MesloLGS NF 폰트로 변경
+
+# 또는 직접 다운로드
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts && ./install.sh && cd .. && rm -rf fonts
+```
+
+> **iTerm2 폰트 설정:** Preferences → Profiles → Text → Font → `MesloLGS NF` 또는 `Meslo LG S for Powerline` 선택
+
+#### 3. zsh-syntax-highlighting 설치
+
+```bash
+# macOS
+brew install zsh-syntax-highlighting
+
+# Ubuntu/Debian
+sudo apt install zsh-syntax-highlighting
+# 설치 후 .zshrc의 source 경로 수정 필요:
+# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+
+#### 4. .zshrc 복사
+
 ```bash
 cp .zshrc ~/
+
+# 적용
+source ~/.zshrc
 ```
+
+> **참고:** `.zshrc` 내 일부 경로(`/Users/sher.lock/...`)는 본인 환경에 맞게 수정이 필요합니다.
 
 ## 🔄 레거시 Vim 설정 (비권장)
 
