@@ -66,3 +66,14 @@ vim.cmd('syntax enable')
 
 -- Colorscheme (molokai replacement - will be set after plugins load)
 vim.g.python_highlight_all = 1
+
+-- Go 관련 파일타입 등록 (gowork, gotmpl 은 nvim 기본 미포함)
+vim.filetype.add({
+  extension = {
+    tmpl = 'gotmpl',
+  },
+  filename = {
+    ['go.work'] = 'gowork',
+    ['go.sum']  = 'gosum',
+  },
+})
