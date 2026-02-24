@@ -106,22 +106,23 @@ if has_node() and has_npm() then
     -- Treesitter (better syntax highlighting)
     {
       "nvim-treesitter/nvim-treesitter",
+      lazy = false,  -- lazy-loading 미지원
       build = ":TSUpdate",
-      event = { "BufReadPost", "BufNewFile" },
       config = function()
-        require("nvim-treesitter.configs").setup({
-          ensure_installed = {
-            "c", "cpp", "python", "lua", "vim", "vimdoc",
-            "bash", "javascript", "typescript", "json", "yaml",
-            "go", "rust", "dockerfile", "terraform", "hcl"
-          },
-          highlight = {
-            enable = true,
-            additional_vim_regex_highlighting = false,
-          },
-          indent = {
-            enable = true,
-          },
+        -- 파서 설치
+        require('nvim-treesitter').install({
+          "c", "cpp", "python", "lua", "vim", "vimdoc",
+          "bash", "javascript", "typescript", "json", "yaml",
+          "go", "rust", "dockerfile", "terraform", "hcl"
+        })
+        -- 파일타입별 highlighting + indent 활성화
+        vim.api.nvim_create_autocmd('FileType', {
+          callback = function()
+            local ok = pcall(vim.treesitter.start)
+            if ok then
+              vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end
+          end,
         })
       end,
     },
@@ -308,21 +309,22 @@ else
     -- Treesitter (better syntax highlighting)
     {
       "nvim-treesitter/nvim-treesitter",
+      lazy = false,  -- lazy-loading 미지원
       build = ":TSUpdate",
-      event = { "BufReadPost", "BufNewFile" },
       config = function()
-        require("nvim-treesitter.configs").setup({
-          ensure_installed = {
-            "c", "cpp", "python", "lua", "vim", "vimdoc",
-            "bash", "json", "yaml", "dockerfile", "terraform", "hcl"
-          },
-          highlight = {
-            enable = true,
-            additional_vim_regex_highlighting = false,
-          },
-          indent = {
-            enable = true,
-          },
+        -- 파서 설치
+        require('nvim-treesitter').install({
+          "c", "cpp", "python", "lua", "vim", "vimdoc",
+          "bash", "json", "yaml", "dockerfile", "terraform", "hcl"
+        })
+        -- 파일타입별 highlighting + indent 활성화
+        vim.api.nvim_create_autocmd('FileType', {
+          callback = function()
+            local ok = pcall(vim.treesitter.start)
+            if ok then
+              vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end
+          end,
         })
       end,
     },
